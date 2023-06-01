@@ -30,4 +30,4 @@
     Dataset과 DataLoader동에 대한 내용.
 
 
-<br>[<상위폴더로 이동하기](../)
+<br>[<상위폴더로 이동하기](https://github.com/parking-place/PlayData_Python_AI_learning/tree/main/02.learning)

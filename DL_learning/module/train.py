@@ -83,7 +83,7 @@ def train(dataloader, model, loss_fn, optimizer, device="cpu", mode:"binary or m
     model.train()
     size = len(dataloader.dataset) #총 데이터수
 
-    for batch, (X, y) in enumerate(dataloader):
+    for X, y in dataloader:
         X, y = X.to(device), y.to(device)
         pred = model(X)
 

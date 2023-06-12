@@ -81,7 +81,6 @@ def train(dataloader, model, loss_fn, optimizer, device="cpu", mode:"binary or m
         tuple: 학습후 계산한 Train set에 대한  train_loss, train_accuracy
     """
     model.train()
-    size = len(dataloader.dataset) #총 데이터수
 
     for X, y in dataloader:
         X, y = X.to(device), y.to(device)
@@ -101,7 +100,10 @@ def train(dataloader, model, loss_fn, optimizer, device="cpu", mode:"binary or m
 
 
 
-def fit(train_loader, val_loader, model, loss_fn, optimizer, epochs, save_best_model=True, save_model_path=None, early_stopping=True, patience=10, device='cpu',  mode:"binary or multi"='binary'):
+def fit(train_loader, val_loader, model, loss_fn, optimizer, epochs, 
+        save_best_model=True, save_model_path=None, 
+        early_stopping=True, patience=10, 
+        device='cpu',  mode:"binary or multi"='binary'):
     """
     모델을 학습시키는 함수
 
@@ -142,8 +144,11 @@ def fit(train_loader, val_loader, model, loss_fn, optimizer, epochs, save_best_m
     model = model.to(device)
     s = time.time()
     for epoch in range(epochs):
-        train_loss, train_accuracy = train(train_loader, model, loss_fn, optimizer, device=device, mode=mode)
+        ### 학습
+        train_loss, train_accuracy = train(train_loader, model, loss_fn, optimizer, 
+                                           device=device, mode=mode)
         
+        ### 검증
         if mode == "binary":
             val_loss, val_accuracy = test_binary_classification(val_loader, model, loss_fn, device=device)
         else:
@@ -159,14 +164,14 @@ def fit(train_loader, val_loader, model, loss_fn, optimizer, epochs, save_best_m
         
         # 모델 저장
         if save_best_model:
-            if val_loss < best_score_save:
+            if val_loss < best_score_save: # 성능개선
                 torch.save(model, save_model_path)
                 print(f"저장: {epoch+1} - 이전 : {best_score_save}, 현재: {val_loss}")
                 best_score_save = val_loss
         
         # early stopping 처리            
         if early_stopping:
-            if val_loss < best_score_es: 
+            if val_loss < best_score_es: # 성능개선
                 best_score_es = val_loss  
                 trigger_count = 0
                                 

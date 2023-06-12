@@ -103,7 +103,8 @@ def train(dataloader, model, loss_fn, optimizer, device="cpu", mode:"binary or m
 def fit(train_loader, val_loader, model, loss_fn, optimizer, epochs, 
         save_best_model=True, save_model_path=None, 
         early_stopping=True, patience=10, 
-        device='cpu',  mode:"binary or multi"='binary'):
+        device='cpu',  mode:"binary or multi"='binary',
+        lr_scheduler=None):
     """
     모델을 학습시키는 함수
 
@@ -120,6 +121,7 @@ def fit(train_loader, val_loader, model, loss_fn, optimizer, epochs,
         patience (int, optional): 조기종료 True일 때 종료전에 성능이 개선될지 몇 epoch까지 기다릴지 epoch수. Defaults to 10.
         device (str, optional): device. Defaults to 'cpu'.
         mode(str, optinal): 분류 종류. "binary(default) or multi
+        lr_scheduler (scheduler, optional): learning rate scheduler 객체. Epoch마다 learning rate를 업데이트 시킬 때 사용. Defaults to None.
     [return]
         tuple: 에폭 별 성능 리스트. (train_loss_list, train_accuracy_list, validation_loss_list, validataion_accuracy_list)
     """
@@ -146,7 +148,11 @@ def fit(train_loader, val_loader, model, loss_fn, optimizer, epochs,
     for epoch in range(epochs):
         ### 학습
         train_loss, train_accuracy = train(train_loader, model, loss_fn, optimizer, 
-                                           device=device, mode=mode)
+                                            device=device, mode=mode)
+        
+        ### 학습률 업데이트
+        if lr_scheduler:
+            lr_scheduler.step()
         
         ### 검증
         if mode == "binary":

@@ -29,5 +29,21 @@
 -
     Dataset과 DataLoader동에 대한 내용.
 
+[06 모델 저장/ 문제 유형별 모델 생성](./06_%EB%AA%A8%EB%8D%B8%EC%A0%80%EC%9E%A5_%EB%AC%B8%EC%A0%9C%20%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AA%A8%EB%8D%B8%20%EC%83%9D%EC%84%B1.ipynb)
+-
+    모델의 저장과, 문제 유형별 모델에 대한 내용.
+
+[07 딥러닝 모델 성능 개선](./06_%EB%AA%A8%EB%8D%B8%EC%A0%80%EC%9E%A5_%EB%AC%B8%EC%A0%9C%20%EC%9C%A0%ED%98%95%EB%B3%84%20%EB%AA%A8%EB%8D%B8%20%EC%83%9D%EC%84%B1.ipynb) / [07 예제](./07_%EB%94%A5%EB%9F%AC%EB%8B%9D%EB%AA%A8%EB%8D%B8_%EC%84%B1%EB%8A%A5%EA%B0%9C%EC%84%A0_%EC%98%88%EC%A0%9C.ipynb)
+-
+    딥 러닝 모델 성능 개선 방법과 예제 내용.
+
+[08 CNN 개요](./08_CNN_%EA%B0%9C%EC%9A%94_%EC%99%84.ipynb)
+-
+    CNN 모델에 대한 내용.
+
+[09 CNN 모델 정의](./09_CNN_Model%20%EC%A0%95%EC%9D%98.ipynb)
+-
+    CNN 모델 정의하는 방법에 대한 내용.
+
 
 <br>[<상위폴더로 이동하기](https://github.com/parking-place/PlayData_Python_AI_learning/tree/main/02.learning)

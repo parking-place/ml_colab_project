@@ -1,4 +1,8 @@
-DL_learning/dataset_comp/*
-DL_learning/datasets/*
-DL_learning/data/*
-DL_learning/models/*
+**/dataset_comp/*
+**/datasets/*
+**/data/*
+**/models/*
+**/test_image/*
+*.zip
+*.tar
+*.tar.gz

@@ -45,5 +45,18 @@
 -
     CNN 모델 정의하는 방법에 대한 내용.
 
+[10 이미지 아규멘테이션](./10_Image%20Augmentation.ipynb)
+-
+    이미지 학습 처리에 관한 내용.
+
+[11 Transfer Learning과 Fine Tunung](./11_Transfer%20Learning%EA%B3%BC%20Fine%20tuning.ipynb)
+-
+    Transfer Learning과 Fine Tunung에 대한 내용.
+
+[12 주요 CNN 모델](./12_%EC%A3%BC%EC%9A%94%20CNN%20%EB%AA%A8%EB%8D%B8.ipynb)
+-
+    중요한 CNN모델들에 대한 내용.
+
+
 
 <br>[<상위폴더로 이동하기](https://github.com/parking-place/PlayData_Python_AI_learning/tree/main/02.learning)

@@ -1,6 +1,6 @@
 # Deep Learning
 </br>
- (05.31 ~ )
+ (05.31 ~ 06.14)
 
  Deep Learning 관련 코드와 강의자료를 모아두고 있습니다.
 -

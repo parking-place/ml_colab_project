@@ -1,6 +1,6 @@
 # Object Detection
 </br>
- (05.31 ~ )
+ (06.14 ~ 06.15)
 
  Object Detection 관련 코드와 강의자료를 모아두고 있습니다.
 -
